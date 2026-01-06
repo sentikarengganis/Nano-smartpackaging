@@ -15,9 +15,7 @@ st.set_page_config(
 st.title("🧫🥩 NanoSmart Packaging")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
-st.write("""
- 
-untuk mendeteksi **kesegaran pangan**  
+st.write("""untuk mendeteksi **kesegaran pangan**  
 berdasarkan **jenis kemasan nano, suhu, dan lama penyimpanan**.
 """)
 
