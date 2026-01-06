@@ -13,7 +13,7 @@ st.set_page_config(
 # JUDUL
 # =============================
 st.title("🧫🥩 NanoSmart Packaging")
-st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
+st.subheader(":orange [Simulasi Kemasan Pintar Berbasis Nanoteknologi]")
 
 
 st.divider()
@@ -83,7 +83,7 @@ if st.button("🔬 Analisis Kesegaran"):
     """
     elif skor >= 50:
         st.warning("🟡 Status Pangan: AGAK NGERI 😱")
-        st.toast("penurunan kualitas")
+        
         indikator = "Kuning"
         keterangan = """
     Pangan menunjukkan tanda ❗ penurunan kualitas ❗.
