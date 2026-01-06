@@ -1,6 +1,7 @@
 import streamlit as st
+
 st.set_page_config(
-    page_title="NanoSmart Packaging",
+    page_title="Nano Smart Packaging",
     page_icon="🧫🥩",
     layout="centered"
 )
