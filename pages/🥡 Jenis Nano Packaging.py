@@ -6,6 +6,25 @@ st.set_page_config(
     layout="centered"
 )
 
+# =============================
+# BACKGROUND GRADIENT ORANGE - PUTIH
+# =============================
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(
+            135deg,
+            #FFFFFF 0%,
+            #FFE0B2 50%,
+            #FFB74D 100%
+        );
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("📘 Jenis Nano Packaging")
 st.write(
     "Berikut adalah jenis-jenis *nano material* yang umum digunakan "
