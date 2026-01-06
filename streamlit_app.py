@@ -83,6 +83,7 @@ if st.button("🔬 Analisis Kesegaran"):
     """
     elif skor >= 50:
         st.warning("🟡 Status Pangan: AGAK NGERI 😱")
+        st.toast("penurunan kualitas")
         indikator = "Kuning"
         keterangan = """
     Pangan menunjukkan tanda ❗ penurunan kualitas ❗.
