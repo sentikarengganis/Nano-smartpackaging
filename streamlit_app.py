@@ -101,6 +101,7 @@ if st.button("🔬 Analisis Kesegaran"):
 
     st.write(f"**Warna indikator kemasan:** {indikator}")
     st.write(f"**Skor kesegaran:** {skor} / 100")
+    st.info(keterangan)
 
     st.info("""
     ⚠️ Catatan:
