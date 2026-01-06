@@ -1,4 +1,10 @@
 import streamlit as st
+# =============================
+# INIT SESSION STATE
+# =============================
+if "show_input" not in st.session_state:
+    st.session_state.show_input = False
+
 
 # =============================
 # KONFIGURASI HALAMAN
@@ -15,8 +21,14 @@ st.set_page_config(
 st.title(":orange[🧫🥩 NanoSmart Packaging]")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
-
 st.divider()
+
+# =============================
+# TOMBOL AWAL
+# =============================
+if not st.session_state.show_input:
+    if st.button("▶ Mulai Input Data"):
+        st.session_state.show_input = True
 
 # =============================
 # INPUT DATA
