@@ -70,22 +70,7 @@ if st.button("🔬 Analisis Kesegaran"):
 
     # Batas skor
     skor = max(0, min(skor, 100))
-    # =============================
-# RINGKASAN INPUT
-# =============================
-st.subheader("📦 Ringkasan Kondisi Penyimpanan")
-
-st.write(f"""
-- **Jenis pangan:** {jenis_pangan}
-- **Jenis kemasan nano:** {jenis_nano}
-- **Suhu penyimpanan:** {suhu} °C
-- **Lama penyimpanan:** {lama} hari
-""")
-
-# =============================
-# HASIL ANALISIS
-# =============================
-
+   
 st.header("📊 Hasil Analisis")
 
     if skor >= 80:
