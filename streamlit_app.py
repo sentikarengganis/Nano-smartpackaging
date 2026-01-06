@@ -86,7 +86,7 @@ st.write(f"""
 # HASIL ANALISIS
 # =============================
 
-    st.header("📊 Hasil Analisis")
+st.header("📊 Hasil Analisis")
 
     if skor >= 80:
         st.success("🟢 Status Pangan: AMAN BRO 🥂")
