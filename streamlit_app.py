@@ -15,9 +15,6 @@ st.set_page_config(
 st.title("🧫🥩 NanoSmart Packaging")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
-st.write("""untuk mendeteksi **kesegaran pangan**  
-berdasarkan **jenis kemasan nano, suhu, dan lama penyimpanan**.
-""")
 
 st.divider()
 
@@ -77,7 +74,7 @@ if st.button("🔬 Analisis Kesegaran"):
     st.header("📊 Hasil Analisis")
 
     if skor >= 80:
-        st.success("🟢 Status Pangan: AUTO AMAN 😋")
+        st.success("🟢 Status Pangan: AMAN BRO 🥂")
         indikator = "Hijau"
         keterangan = """
     Pangan berada dalam kondisi ❗ aman untuk dikonsumsi ❗.
@@ -117,9 +114,7 @@ st.divider()
 st.header("📖 NanoSmart Packaging")
 
 st.write("""
-NanoSmart Packaging memanfaatkan material nano
-untuk meningkatkan keamanan pangan,
-memperlambat pertumbuhan mikroba,
-dan memberikan **indikator visual kesegaran**
-berdasarkan perubahan kondisi lingkungan.
+NanoSmart Packaging memanfaatkan material nano untuk
+meningkatkan keamanan pangan, memperlambat pertumbuhan mikroba, dan memberikan indikator visual
+kesegaran berdasarkan berdasarkan jenis kemasan nano, suhu, dan lama penyimpanan.
 """)
