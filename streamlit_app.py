@@ -102,7 +102,7 @@ if st.button("🔬 Analisis Kesegaran"):
     st.write(f"**Skor kesegaran:** {skor} / 100")
     st.info(keterangan)
 
-    st.info( """ ⚠️ Catatan
+    st.error( """ ⚠️ Catatan
     Hasil ini merupakan simulasi berbasis literatur nanoteknologi pangan,
     bukan hasil pengukuran eksperimental langsung.
     """)
