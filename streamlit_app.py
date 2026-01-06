@@ -16,9 +16,9 @@ st.title("🧪 NanoSmart Packaging")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
 st.write("""
-Aplikasi ini merupakan *simulator berbasis web*  
-untuk memprediksi *status kesegaran pangan*  
-berdasarkan *jenis kemasan nano, suhu, dan lama penyimpanan*.
+Aplikasi ini merupakan **simulator berbasis web**  
+untuk memprediksi **status kesegaran pangan**  
+berdasarkan **jenis kemasan nano, suhu, dan lama penyimpanan**.
 """)
 
 st.divider()
@@ -88,8 +88,8 @@ if st.button("🔬 Analisis Kesegaran"):
         st.error("🔴 Status Pangan: TIDAK LAYAK KONSUMSI")
         indikator = "Merah"
 
-    st.write(f"*Warna indikator kemasan:* {indikator}")
-    st.write(f"*Skor kesegaran:* {skor} / 100")
+    st.write(f"**Warna indikator kemasan:** {indikator}")
+    st.write(f"**Skor kesegaran:** {skor} / 100")
 
     st.info("""
     ⚠️ Catatan:
@@ -108,6 +108,6 @@ st.write("""
 NanoSmart Packaging memanfaatkan material nano
 untuk meningkatkan keamanan pangan,
 memperlambat pertumbuhan mikroba,
-dan memberikan *indikator visual kesegaran*
+dan memberikan **indikator visual kesegaran**
 berdasarkan perubahan kondisi lingkungan.
 """)
