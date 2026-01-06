@@ -75,6 +75,7 @@ if st.button("🔬 Analisis Kesegaran"):
 
     if skor >= 80:
         st.success("🟢 Status Pangan: AMAN BRO 🥂")
+        st.balloons()
         indikator = "Hijau"
         keterangan = """
     Pangan berada dalam kondisi ❗ aman untuk dikonsumsi ❗.
