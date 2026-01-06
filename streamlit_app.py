@@ -17,6 +17,10 @@ st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
 
 st.divider()
+# =====================
+# TOMBOL PEMICU
+# =====================
+if st.button("▶ Mulai Simulasi"):
 
 # =============================
 # INPUT DATA
