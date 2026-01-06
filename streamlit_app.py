@@ -70,8 +70,7 @@ if st.button("🔬 Analisis Kesegaran"):
 
     # Batas skor
     skor = max(0, min(skor, 100))
-   
-st.header("📊 Hasil Analisis")
+    st.header("📊 Hasil Analisis")
 
     if skor >= 80:
         st.success("🟢 Status Pangan: AMAN BRO 🥂")
