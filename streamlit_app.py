@@ -12,7 +12,7 @@ st.set_page_config(
 # =============================
 # JUDUL
 # =============================
-st.title("🧫🥩 : orange [NanoSmart Packaging]:")
+st.title(":orange[🧫🥩 NanoSmart Packaging]")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
 
