@@ -77,13 +77,13 @@ if st.button("🔬 Analisis Kesegaran"):
     st.header("📊 Hasil Analisis")
 
     if skor >= 80:
-        st.success("🟢 Status Pangan: SEGAR")
+        st.success("🟢 Status Pangan: AUTO AMAN 😋")
         indikator = "Hijau"
     elif skor >= 50:
-        st.warning("🟡 Status Pangan: MULAI MENURUN")
+        st.warning("🟡 Status Pangan: AGAK NGERI 😱")
         indikator = "Kuning"
     else:
-        st.error("🔴 Status Pangan: TIDAK LAYAK KONSUMSI")
+        st.error("🔴 Status Pangan: BAHAYA BRO ☠️")
         indikator = "Merah"
 
     st.write(f"**Warna indikator kemasan:** {indikator}")
@@ -100,7 +100,7 @@ st.divider()
 # =============================
 # EDUKASI
 # =============================
-st.header("📚 Edukasi NanoSmart Packaging")
+st.header("📖 NanoSmart Packaging")
 
 st.write("""
 NanoSmart Packaging memanfaatkan material nano
