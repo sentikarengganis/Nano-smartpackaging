@@ -16,8 +16,8 @@ st.title("🧫🥩 NanoSmart Packaging")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 
 st.write("""
-Aplikasi ini merupakan **simulator berbasis web**  
-untuk memprediksi **status kesegaran pangan**  
+ 
+untuk mendeteksi **kesegaran pangan**  
 berdasarkan **jenis kemasan nano, suhu, dan lama penyimpanan**.
 """)
 
