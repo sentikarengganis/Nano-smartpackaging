@@ -80,14 +80,14 @@ if st.button("🔬 Analisis Kesegaran"):
         st.success("🟢 Status Pangan: AUTO AMAN 😋")
         indikator = "Hijau"
         keterangan = """
-    Pangan berada dalam kondisi ** aman untuk dikonsumsi**.
+    Pangan berada dalam kondisi ❗ aman untuk dikonsumsi ❗.
     Kemasan nano masih bekerja secara optimal dalam menjaga mutu pangan.
     """
     elif skor >= 50:
         st.warning("🟡 Status Pangan: AGAK NGERI 😱")
         indikator = "Kuning"
         keterangan = """
-    Pangan menunjukkan tanda **penurunan kualitas**.
+    Pangan menunjukkan tanda ❗ penurunan kualitas ❗.
     Produk **masih dapat dikonsumsi dengan kehati-hatian**,
     namun tidak disarankan untuk penyimpanan lebih lama.
     """
@@ -95,7 +95,7 @@ if st.button("🔬 Analisis Kesegaran"):
         st.error("🔴 Status Pangan: BAHAYA BRO ☠️")
         indikator = "Merah"
         keterangan = """
-    Pangan berada pada kondisi **tidak aman untuk dikonsumsi**.
+    Pangan berada pada kondisi ❗ tidak aman untuk dikonsumsi ❗.
     Disarankan untuk **tidak mengonsumsi produk** demi menghindari risiko kesehatan.
     """
 
