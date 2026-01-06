@@ -20,7 +20,7 @@ st.divider()
 # =====================
 # TOMBOL PEMICU
 # =====================
-if st.button("▶ Mulai Simulasi"):
+    if st.button("▶ Mulai Simulasi"):
 
 # =============================
 # INPUT DATA
