@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Jenis Nano Packaging",
-    page_icon="🌬️",
+    page_icon="🦠",
     layout="centered"
 )
 
@@ -25,7 +25,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("📘 Jenis Nano Packaging")
+st.title("🦠 Jenis Nano Packaging")
 st.write(
     "Berikut adalah jenis-jenis *nano material* yang umum digunakan "
     "dalam *NanoSmart Packaging* untuk menjaga kualitas dan keamanan pangan."
