@@ -81,19 +81,19 @@ if st.session_state.mulai:
     # =============================
     if st.button("🔬 Analisis Kesegaran", use_container_width=True):
 
-        skor = 100
+    skor = 100
 
-        # Pengaruh suhu
-        if suhu <= 4:
-        skor += 10   # cold storage memperpanjang shelf life
-        elif suhu <= 10:
-        skor -= 5    # masih relatif aman
-        elif suhu <= 20:
-        skor -= 20   # mulai berisiko
-        else:
-        skor -= 40   # suhu tinggi = cepat rusak
+    # Pengaruh suhu
+    if suhu <= 4:
+        skor += 10
+    elif suhu <= 10:
+        skor -= 5
+    elif suhu <= 20:
+        skor -= 20
+    else:
+        skor -= 40
+
   
-
 
         # Pengaruh waktu
         if lama > 10:
