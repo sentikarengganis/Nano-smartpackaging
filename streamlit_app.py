@@ -84,7 +84,7 @@ if st.session_state.mulai:
         skor = 100
 
         # Pengaruh suhu
-          if suhu <= 4:
+        if suhu <= 4:
         skor += 10   # cold storage memperpanjang shelf life
         elif suhu <= 10:
         skor -= 5    # masih relatif aman
