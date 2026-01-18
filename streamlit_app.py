@@ -1,14 +1,16 @@
 import streamlit as st
 
+# =============================
+# KONFIGURASI HALAMAN
+# =============================
 st.set_page_config(
     page_title="Nano Smart Packaging",
     page_icon="🧫🥩",
     layout="centered"
 )
 
-
 # =============================
-# BACKGROUND GRADIENT ORANGE - PUTIH
+# BACKGROUND GRADIENT
 # =============================
 st.markdown(
     """
@@ -35,7 +37,7 @@ if "mulai" not in st.session_state:
 # =============================
 # JUDUL
 # =============================
-st.title(":orange[🧫🥩 NanoSmart Packaging]")
+st.title("🧫🥩 NanoSmart Packaging")
 st.subheader("Simulasi Kemasan Pintar Berbasis Nanoteknologi")
 st.divider()
 
@@ -50,7 +52,7 @@ if not st.session_state.mulai:
     )
 
 # =============================
-# INPUT & ANALISIS (SETELAH KLIK)
+# INPUT DATA
 # =============================
 if st.session_state.mulai:
 
@@ -83,23 +85,33 @@ if st.session_state.mulai:
 
         skor = 100
 
-    # Pengaruh suhu
-    if suhu <= 4:
-        skor += 10
-    elif suhu <= 10:
-        skor -= 5
-    elif suhu <= 20:
-        skor -= 20
-    else:
-        skor -= 40
+        # ======================
+        # Pengaruh Suhu (Literatur)
+        # ======================
+        if suhu <= 4:
+            skor += 10          # cold storage memperpanjang shelf life
+        elif suhu <= 10:
+            skor -= 5           # masih relatif aman
+        elif suhu <= 20:
+            skor -= 20          # mulai berisiko
+        else:
+            skor -= 40          # suhu tinggi = cepat rusak
 
-  
-
-        # Pengaruh waktu
-        if lama > 10:
+        # ======================
+        # Pengaruh Waktu Simpan
+        # ======================
+        if lama <= 3:
+            skor += 5
+        elif lama <= 7:
+            skor -= 5
+        elif lama <= 14:
+            skor -= 20
+        else:
             skor -= 40
 
-        # Efektivitas nano material
+        # ======================
+        # Efektivitas Nano Material
+        # ======================
         if "Perak" in jenis_nano:
             skor += 20
         elif "ZnO" in jenis_nano:
@@ -109,8 +121,12 @@ if st.session_state.mulai:
         elif "Clay" in jenis_nano:
             skor += 5
 
+        # Batasi skor 0–100
         skor = max(0, min(skor, 100))
 
+        # ======================
+        # OUTPUT HASIL
+        # ======================
         st.header("📊 Hasil Analisis")
 
         if skor >= 80:
@@ -118,30 +134,30 @@ if st.session_state.mulai:
             st.balloons()
             indikator = "Hijau"
             keterangan = """
-Pangan berada dalam kondisi ❗ aman untuk dikonsumsi ❗.
-Kemasan nano masih bekerja secara optimal dalam menjaga mutu pangan.
+Pangan berada dalam kondisi aman untuk dikonsumsi.
+Kemasan nano bekerja optimal dalam menjaga mutu produk.
 """
         elif skor >= 50:
             st.warning("🟡 Status Pangan: AGAK NGERI 😱")
             indikator = "Kuning"
             keterangan = """
-Pangan menunjukkan tanda ❗ penurunan kualitas ❗.
-Masih dapat dikonsumsi dengan kehati-hatian,
-namun tidak disarankan untuk penyimpanan lebih lama.
+Pangan mulai mengalami penurunan kualitas.
+Masih dapat dikonsumsi dengan kehati-hatian.
 """
         else:
             st.error("🔴 Status Pangan: BAHAYA BRO ☠️")
             indikator = "Merah"
             keterangan = """
-Pangan berada pada kondisi ❗ tidak aman untuk dikonsumsi ❗.
-Disarankan untuk *tidak mengonsumsi produk*.
+Pangan berada dalam kondisi tidak aman untuk dikonsumsi.
+Disarankan untuk tidak mengonsumsi produk.
 """
 
-        st.write(f"*Warna indikator kemasan:* {indikator}")
-        st.write(f"*Skor kesegaran:* {skor} / 100")
+        st.write(f"**Warna indikator kemasan:** {indikator}")
+        st.write(f"**Skor kesegaran:** {skor} / 100")
         st.info(keterangan)
 
-        st.error("""⚠️ Catatan  
+        st.error("""
+⚠️ Catatan  
 Hasil ini merupakan simulasi berbasis literatur nanoteknologi pangan,
 bukan hasil pengukuran eksperimental langsung.
 """)
@@ -153,10 +169,10 @@ bukan hasil pengukuran eksperimental langsung.
     # =============================
     st.header("📖 NanoSmart Packaging")
     st.write("""
-NanoSmart Packaging memanfaatkan material nano untuk
-meningkatkan keamanan pangan, memperlambat pertumbuhan mikroba,
-dan memberikan indikator visual kesegaran berdasarkan
-jenis kemasan nano, suhu, dan lama penyimpanan.
+NanoSmart Packaging memanfaatkan material nano untuk meningkatkan
+keamanan pangan, memperlambat pertumbuhan mikroba, serta memberikan
+indikator visual kesegaran berdasarkan suhu, waktu penyimpanan,
+dan jenis kemasan nano.
 """)
 
     # =============================
@@ -164,3 +180,4 @@ jenis kemasan nano, suhu, dan lama penyimpanan.
     # =============================
     if st.button("⬅ Kembali ke Awal"):
         st.session_state.mulai = False
+
