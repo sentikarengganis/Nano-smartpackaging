@@ -81,7 +81,7 @@ if st.session_state.mulai:
     # =============================
     if st.button("🔬 Analisis Kesegaran", use_container_width=True):
 
-    skor = 100
+        skor = 100
 
     # Pengaruh suhu
     if suhu <= 4:
